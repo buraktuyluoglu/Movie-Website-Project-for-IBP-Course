@@ -1,0 +1,19 @@
+.custom-order-page{
+    height: 80vh;
+}
+.custom-page-logo{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    background-size: cover;
+    opacity: 0.2;
+    z-index: 999;
+    top:0;
+    left:0;
+    font-family: 'Russo One', sans-serif;
+
+}
+.custom-page-logo h1{
+    font-family: 'Russo One', sans-serif;
+
+}

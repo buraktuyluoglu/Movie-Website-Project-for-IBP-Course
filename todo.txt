@@ -1,0 +1,2 @@
+[] -> İçi boş formlar re-generate edilecek
+[] -> controllerlar ayarlanacak
