@@ -12,7 +12,7 @@ class Category extends Model
     use SoftDeletes;
     protected $fillable = ['title', 'description', 'image', 'status','slug'];
 
-    public function properties(){
-        return $this->hasMany(Property::class,"category_id","id");
+    public function movies(){
+        return $this->hasMany(Movie::class,"category_id","id");
     }
 }

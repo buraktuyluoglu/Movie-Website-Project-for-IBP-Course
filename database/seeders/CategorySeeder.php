@@ -16,7 +16,7 @@ class CategorySeeder extends Seeder
         Category::create([
             'title' => "Aksiyon Filmleri",
             'description' => "Aksiyon filmleri ile heyecanı doruğa çıkartabilirsiniz.",
-            'image' => "no_image",
+            'image' => "public/covers/category.jpg",
             "slug" => "aksiyon-filmleri",
             "status" => "ACTIVE"
         ]);
@@ -24,7 +24,7 @@ class CategorySeeder extends Seeder
         Category::create([
             'title' => "Komedi Filmleri",
             'description' => "Komedi filmleri ile kahkahalarla dolu bir zaman geçirebilirsiniz.",
-            'image' => "no_image",
+            'image' => "public/covers/category.jpg",
             "slug" => "komedi-filmleri",
             "status" => "ACTIVE"
         ]);
@@ -32,7 +32,7 @@ class CategorySeeder extends Seeder
         Category::create([
             'title' => "Korku Filmleri",
             'description' => "Korku filmleri ile gerilimi hissedebilirsiniz.",
-            'image' => "no_image",
+            'image' => "public/covers/category.jpg",
             "slug" => "korku-filmleri",
             "status" => "ACTIVE"
         ]);
@@ -40,7 +40,7 @@ class CategorySeeder extends Seeder
         Category::create([
             'title' => "Romantik Komedi",
             'description' => "Romantik komedi filmleri ile duygusal ve komik anlar yaşayabilirsiniz.",
-            'image' => "no_image",
+            'image' => "public/covers/category.jpg",
             "slug" => "romantik-komedi",
             "status" => "ACTIVE"
         ]);

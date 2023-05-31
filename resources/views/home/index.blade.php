@@ -14,7 +14,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <h1 class="home__title"><b>NEW ITEMS</b> OF THIS SEASON</h1>
+                    <h1 class="home__title"><b>LAST UPLOADED</b> OF THIS SEASON</h1>
 
                     <button class="home__nav home__nav--prev" type="button">
                         <i class="icon ion-ios-arrow-round-back"></i>
@@ -114,7 +114,7 @@
                                 <div class="row">
                                     <div class="col-12 col-sm-4">
                                         <div class="card__cover">
-                                            <img src="{{asset('home')}}/img/covers/cover.jpg" alt="">
+                                            <img src="{{Storage::url($movie->image)}}" alt="">
                                             <a href="#" class="card__play">
                                                 <i class="icon ion-ios-play"></i>
                                             </a>
@@ -123,10 +123,9 @@
 
                                     <div class="col-12 col-sm-8">
                                         <div class="card__content">
-                                            <h3 class="card__title"><a href="#">I Dream in Another Language</a></h3>
+                                            <h3 class="card__title"><a href="#">{{$movie->name}}</a></h3>
                                             <span class="card__category">
-												<a href="#">Action</a>
-												<a href="#">Triler</a>
+												<a href="#">{{$movie->category->title}}</a>
 											</span>
 
                                             <div class="card__wrap">
@@ -139,7 +138,7 @@
                                             </div>
 
                                             <div class="card__description">
-                                                <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+                                                <p>{{$movie->descriptions}}</p>
                                             </div>
                                         </div>
                                     </div>
