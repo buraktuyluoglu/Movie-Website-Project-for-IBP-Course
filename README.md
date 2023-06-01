@@ -9,8 +9,7 @@
 [COMPLETED] -> SEARCH
 [COMPLETED] -> Announcements Check
 [COMPLETED] -> Announcements Connect To Home Page
-
-[] -> Contact Messages Check
+[COMPLETED] -> Contact Messages Check
 
 [] -> Series CRUD
     [] -> Single Episode CRUD

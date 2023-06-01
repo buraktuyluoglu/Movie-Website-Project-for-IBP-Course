@@ -18,8 +18,14 @@
         color:white;
         text-indent: 12px;
     }
+
+    table{
+        background-color:#fff;
+        padding:25px;
+        width:100%;
+    }
 </style>
-    <div class="container my-5">
+    <div class="container my-5 py-5"  >
         <h2 class="font-semibold text-xl text-gray-800 leading-tight my-3">
                 {{ __('Profile') }}
         </h2>
@@ -55,8 +61,28 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="tab-pane fade" id="order">
-                            ASDSADSA
+                        <div class="tab-pane fade table-hover" id="order">
+                            <table class="table">
+                                <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Movie</th>
+                                    <th>Type</th>
+                                    <th>Comment</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                @foreach (\Illuminate\Support\Facades\Auth::user()->comments as $comment)
+                                    <tr>
+                                        <td>{{ $comment->id }}</td>
+                                        <td><a href="{{route('home.movie_show',['id' => $comment->movie_id]) }}">{{$comment->movie->name}}</a></td>
+                                        <td>{{ $comment->parent_id===0?"YORUM":"YANIT" }}</td>
+                                        <td>{{ $comment->comment }}</td>
+                                    </tr>
+                                @endforeach
+                                </tbody>
+                            </table>
+
                         </div>
 
                     </div>

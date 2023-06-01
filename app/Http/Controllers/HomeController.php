@@ -4,10 +4,12 @@ namespace App\Http\Controllers;
 
 use App\Models\Announcement;
 use App\Models\Category;
+use App\Models\Comment;
 use App\Models\ContactMessage;
 use App\Models\Movie;
 use App\Models\Settings;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
@@ -34,6 +36,7 @@ class HomeController extends Controller
 
     public function movie_show($id){
         $movie = Movie::find($id);
+
         return view("home.movie.show",[
             'movie' => $movie
         ]);
@@ -50,9 +53,7 @@ class HomeController extends Controller
         return view("home.category.index");
     }
 
-    public function movie_detail($id){
-       return view('home.cart.movie_detail');
-    }
+
 
 
     public function contact_message(Request $req){
