@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string("phone");
             $table->string("ip");
             $table->longText("text");
-            $table->enum("status",["NEW","CHECKED"]);
+            $table->enum("status",["NEW","CHECKED"])->default("NEW");
             $table->softDeletes();
             $table->timestamps();
         });

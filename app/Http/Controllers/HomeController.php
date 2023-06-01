@@ -63,6 +63,7 @@ class HomeController extends Controller
        $message->ip = request()->ip();
        $message->email = $req->email;
        $message->phone = $req->phone;
+       $message->status = "NEW";
        $message->save();
        return redirect()->back()->with("success","Message has been send gracefully!");
     }
