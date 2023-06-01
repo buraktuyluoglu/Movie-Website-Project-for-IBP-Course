@@ -1,14 +1,30 @@
 <div>
-    <div class="advanced-search">
-        <button type="button" class="category-btn">All Categories</button>
-        <div class="input-group">
-            <input type="text" placeholder="What do you need?" wire:model="search">
-            <div class="fixed" style="z-index:999; background: #4a5568; width:200px;font-size:18px;">
-                @foreach($items as $item)
-                    <div class="item"><a class="text-white px-3" href="{{route('home.properties_detail',['id' => $item->id])}}"> {{$item->title}}</a></div>
-                @endforeach
+<style>
+    .header_search--results{
+        background: #2b2b31;
+        color:#fff;
+        font-size:18px;
+    }
+    .header_search--results .item:hover a{
+        color:#ff577d;;
+    }
+</style>
+    <form action="#" class="header__search header__search--active">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="header__search-content">
+                        <input type="text" placeholder="Search for a movie, TV Series that you are looking for" wire:model="search">
+                    </div>
+                    <div class="fixed header_search--results" >
+                    @if($items !=null)
+                            @foreach($items as $item)
+                                <div class="item"><a class="text-white px-3" href="{{route('home.movie_show',['id' => $item->id])}}"> {{$item->name}}</a></div>
+                            @endforeach
+                        @endif
+                    </div>
+                </div>
             </div>
-            <button type="button"><i class="ti-search"></i></button>
         </div>
-    </div>
+    </form>
 </div>

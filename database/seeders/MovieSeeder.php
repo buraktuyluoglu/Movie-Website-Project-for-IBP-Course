@@ -19,7 +19,9 @@ class MovieSeeder extends Seeder
             'tags' => "dream, another, lanugage",
             "category_id"=> 1,
             "image" => "public/covers/cover.jpg",
-            "cloud_link" => "https://www.youtube.com/watch?v=DaaR778USsg"
+            "cloud_link" => "DaaR778USsg",
+            "release_year" => "2013",
+            "running_time" => "120 min"
         ]);
         Movie::create([
             'name' => "Benched",
@@ -27,7 +29,9 @@ class MovieSeeder extends Seeder
             'tags' => "benched,movie",
             "category_id"=> 1,
             "image" =>"public/covers/cover2.jpg",
-            "cloud_link" => "https://www.youtube.com/watch?v=6M2N1dztNU0"
+            "cloud_link" => "6M2N1dztNU0",
+            "release_year" => "2014",
+            "running_time" => "210 min"
             ]);
         Movie::create([
             'name' => "Sakar Şakir",
@@ -35,7 +39,9 @@ class MovieSeeder extends Seeder
             'tags' => "sakar şakir, comedy",
             "category_id" => 2,
             "image" => "public/covers/cover7.jpg",
-            "cloud_link" => "https://www.youtube.com/watch?v=abc123"
+            "cloud_link" => "abc123",
+            "release_year" => "2015",
+            "running_time" => "190 min"
         ]);
 
         Movie::create([
@@ -44,7 +50,9 @@ class MovieSeeder extends Seeder
             'tags' => "withney, movie",
             "category_id"=> 2,
             "image" => "public/covers/cover3.jpg",
-            "cloud_link" => "https://www.youtube.com/watch?v=stOXnCPxOws"
+            "cloud_link" => "stOXnCPxOws",
+            "release_year" => "2016",
+            "running_time" => "180 min"
         ]);
         Movie::create([
             'name' => "Blindspotting",
@@ -52,7 +60,9 @@ class MovieSeeder extends Seeder
             'tags' => "blindpotting, movie, enjoy",
             "category_id"=> 3,
             "image" => "public/covers/cover4.jpg",
-            "cloud_link" => "https://www.youtube.com/watch?v=o1lLnQhQcgA"
+            "cloud_link" => "o1lLnQhQcgA",
+            "release_year" => "2017",
+            "running_time" => "125 min"
         ]);
         Movie::create([
             'name' => "The Shawshank Redemption",
@@ -60,7 +70,9 @@ class MovieSeeder extends Seeder
             'tags' => "drama, redemption, prison",
             "category_id"=> 3,
             "image" => "public/covers/cover11.jpg",
-            "cloud_link" => "https://www.youtube.com/watch?v=6hB3S9bIaco"
+            "cloud_link" => "6hB3S9bIaco",
+            "release_year" => "2018",
+            "running_time" => "130 min"
         ]);
         Movie::create([
             'name' => "Inception",
@@ -68,7 +80,9 @@ class MovieSeeder extends Seeder
             'tags' => "mind-bending, action, thriller",
             "category_id"=> 4,
             "image" => "public/covers/cover8.jpg",
-            "cloud_link" => "https://www.youtube.com/watch?v=YoHD9XEInc0"
+            "cloud_link" => "YoHD9XEInc0",
+            "release_year" => "2019",
+            "running_time" => "110 min"
         ]);
         Movie::create([
             'name' => "Interstellar",
@@ -76,7 +90,9 @@ class MovieSeeder extends Seeder
             'tags' => "mind-bending, action, thriller",
             "category_id"=> 4,
             "image" => "public/covers/cover9.jpg",
-            "cloud_link" => "https://www.youtube.com/watch?v=YoHD9XEInc0"
+            "cloud_link" => "YoHD9XEInc0",
+            "release_year" => "2020",
+            "running_time" => "150 min"
         ]);
         Movie::create([
             'name' => "The Dark Knight",
@@ -84,7 +100,9 @@ class MovieSeeder extends Seeder
             'tags' => "superhero, crime, action",
             "category_id"=> 4,
             "image" => "public/covers/cover10.jpg",
-            "cloud_link" => "https://www.youtube.com/watch?v=EXeTwQWrcwY"
+            "cloud_link" => "EXeTwQWrcwY",
+            "release_year" => "2011",
+            "running_time" => "140 min"
         ]);
     }
 }

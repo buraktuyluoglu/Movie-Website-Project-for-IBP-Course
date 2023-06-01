@@ -1,9 +1,9 @@
 <!-- Main Sidebar Container -->
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="/admin" class="brand-link">
-        <i class="fa fa-home text-white px-2 py-1"></i>
-        <span class="brand-text font-weight-light">Film & Dizi İzle</span>
+    <a href="/admin" class="brand-link  text-warning">
+        <i class="fa fa-video text-white px-2 py-1"></i>
+        <span class="brand-text font-weight-bolder text-warning">Film & Dizi İzle</span>
     </a>
 
     <!-- Sidebar -->

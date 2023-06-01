@@ -16,10 +16,11 @@ use Illuminate\Support\Facades\Route;
 Route::middleware(["announcements"])->name("home.")->group(function (){
         Route::get("/",[HomeController::class,"index"])->name("index");
         Route::get("/categories",[HomeController::class,"categories"])->name("category.index");
-        Route::get("/properties/detail/{id}",[HomeController::class,"properties_detail"])->name("properties_detail");
+        Route::get("/movie/{id}",[HomeController::class,"movie_show"])->name("movie_show");
         Route::get("/contact",[HomeController::class,"contact"])->name("contact");
         Route::post("/contact",[HomeController::class,"contact_message"])->name("contact_message");
         Route::get("/about",[HomeController::class,"about"])->name("about");
+        Route::get("/faq",[HomeController::class,"faq"])->name("faq");
         Route::get("/announcements",[HomeController::class,"announcements"])->name("announcements");
         Route::get("/c/{id}/{slug}",[HomeController::class,"category_property"])->name("category.property");
 });

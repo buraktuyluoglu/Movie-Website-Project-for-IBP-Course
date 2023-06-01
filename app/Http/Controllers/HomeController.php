@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Announcement;
 use App\Models\Category;
 use App\Models\ContactMessage;
 use App\Models\Movie;
@@ -31,29 +32,28 @@ class HomeController extends Controller
         return view("home.pages.announcements");
     }
 
-
+    public function movie_show($id){
+        $movie = Movie::find($id);
+        return view("home.movie.show",[
+            'movie' => $movie
+        ]);
+    }
     public function about()
     {
         return view("home.pages.about");
+    }
+    public function faq()
+    {
+        return view("home.pages.faq");
     }
     public function categories() {
         return view("home.category.index");
     }
 
     public function movie_detail($id){
-
-
        return view('home.cart.movie_detail');
     }
 
-
-    public function category_property($id, $slug){
-
-        $properties = Category::find($id)->properties;
-        return view("home.cart.property-list",[
-            'properties' => $properties
-        ]);
-    }
 
     public function contact_message(Request $req){
 

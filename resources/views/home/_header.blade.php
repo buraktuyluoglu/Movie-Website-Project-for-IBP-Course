@@ -15,14 +15,25 @@
 
                         <!-- header auth -->
                         <div class="header__auth">
+
                             <button class="header__search-btn" type="button">
                                 <i class="icon ion-ios-search"></i>
                             </button>
+                            @auth
+                                <a href="{{route('profile.edit')}}"  class="header__profile">
+                                    <i class="fa-solid fa-user" style="color: white !important;"></i>
+                                </a>
+                                <form action="{{ route('logout') }}" method="POST" class="header__profile" style="margin-top:15px;">
+                                    @csrf
+                                    <button  type="submit"> <i class="fas fa-sign-out-alt" style="color: white !important;"></i></button>
+                                </form>
 
-                            <a href="{{route('login')}}" class="header__sign-in">
-                                <i class="icon ion-ios-log-in"></i>
-                                <span>sign in</span>
-                            </a>
+                            @else
+                                <a href="{{route('login')}}" class="header__sign-in">
+                                    <i class="icon ion-ios-log-in"></i>
+                                    <span>sign in</span>
+                                </a>
+                            @endauth
                         </div>
                         <!-- end header auth -->
 
@@ -40,19 +51,7 @@
     </div>
 
     <!-- header search -->
-    <form action="#" class="header__search">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="header__search-content">
-                        <input type="text" placeholder="Search for a movie, TV Series that you are looking for">
-
-                        <button type="button">search</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </form>
+    @livewire('home-search')
     <!-- end header search -->
 </header>
 <!-- end header -->

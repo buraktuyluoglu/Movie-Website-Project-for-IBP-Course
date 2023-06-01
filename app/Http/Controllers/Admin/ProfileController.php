@@ -5,7 +5,6 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\ProfileUpdateRequest;
 use App\Models\Category;
-use App\Models\Order;
 use App\Models\Settings;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
@@ -25,14 +24,12 @@ class ProfileController extends Controller
     }
     public function edit(Request $request): View
     {
-        $orders = Order::where('user_id',Auth::user()->id)->get();
 
 
         return view('profile.edit', [
             'user' => $request->user(),
             'settings' => $this->settings,
             'categories' => $this->categories,
-            'orders' => $orders
         ]);
     }
 

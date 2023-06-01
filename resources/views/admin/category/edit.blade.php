@@ -34,8 +34,8 @@
                 <div class="form-group">
                     <label for="status">Status</label>
                     <select name="status" id="status" class="form-control" required>
-                        <option value="active" {{ $category->status == 'active' ? 'selected' : '' }}>Active</option>
-                        <option value="inactive" {{ $category->status == 'inactive' ? 'selected' : '' }}>Inactive</option>
+                        <option value="active" {{ $category->status == 'ACTIVE' ? 'selected' : '' }}>Active</option>
+                        <option value="inactive" {{ $category->status == 'INACTIVE' ? 'selected' : '' }}>Inactive</option>
                     </select>
                 </div>
                 <button class="btn btn-primary" type="submit">Update</button>

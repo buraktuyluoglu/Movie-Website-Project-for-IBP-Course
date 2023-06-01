@@ -15,6 +15,8 @@ return new class extends Migration
             $table->id()->autoIncrement();
             $table->string("name");
             $table->longText("descriptions");
+            $table->string("release_year")->default("2015");
+            $table->string("running_time")->default("120 min");
             $table->string("tags");
             $table->foreignId("category_id")->references("id")->on("categories");
             $table->string("image")->default("no_img");

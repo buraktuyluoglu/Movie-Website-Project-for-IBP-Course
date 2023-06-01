@@ -1,6 +1,6 @@
 <div>
     <div class="row">
-        <input class="form-control my-3" placeholder="Search by title" wire:model="search" />
+        <input class="form-control my-3" placeholder="Search by title-description" wire:model="search" />
     </div>
     <div class="row">
         <table class="table table-bordered table-dark text-white table-hover">

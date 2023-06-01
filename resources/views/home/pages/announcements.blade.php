@@ -1,16 +1,26 @@
 @extends("layouts.home")
 @section("content")
-    <div class="row">
-        @foreach($announcements as $announcement)
-        <div class=" col-md-4 p-5">
-            <div class="card bg-danger text-white">
-                <div class="card-body">
-                    <h5 class="card-title">{{$announcement->title}}</h5>
-                    <p class="card-text">{{$announcement->body}}</p>
-                    <a href="{{route('home.properties')}}" class="btn btn-warning">Discover</a>
+    <div class="container p-5">
+        <!-- faq -->
+        <section class="section">
+            <div class="container">
+                <div class="row mb-5">
+                    <h1 style="color:#fff;">Duyurular</h1>
+                    <small style="color:#fff;">Vizyona girenler, telif hakkı sebebiyle kaldırılan filmler, yenilikler ve daha fazlası için takipte kalın</small>
+                </div>
+                <div class="row">
+                    @foreach($announcements as $announcement)
+                    <div class="col-12 col-md-6">
+                            <div class="faq">
+                                <h3 class="faq__title">{{$announcement->title}}</h3>
+                                <p class="faq__text">{{$announcement->body}}</p>
+                            </div>
+                    </div>
+                    @endforeach
                 </div>
             </div>
-        </div>
-        @endforeach
+        </section>
+        <!-- end faq -->
     </div>
+
 @endsection

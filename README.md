@@ -1,9 +1,32 @@
 # ADMIN
-[] -> Movie CRUD
-[] -> Category Check
+[COMPLETED] -> Movie CRUD
+[COMPLETED] -> FAQ Design 
+[COMPLETED] -> About Design
+[COMPLETED] -> Category Check
+[COMPLETED] -> Movie Detail
+[COMPLETED] -> Settings Check
+[COMPLETED] -> User Management Check
+[COMPLETED] -> SEARCH
+[COMPLETED] -> Announcements Check
+[COMPLETED] -> Announcements Connect To Home Page
+
+[] -> Contact Messages Check
+
 [] -> Series CRUD
     [] -> Single Episode CRUD
-[] -> User Management Check
-[] -> Announcements Check
-[] -> Contact Messages Check
-[] -> Settings Check
+
+[] -> Comment Management
+
+
+# ADMIN DESIGN UPDATE
+    [] -> Dashboard 
+    [] -> Movies CRUD Design
+    [] -> Category CRUD Design
+    [] -> Series CRUD Design
+    [] -> Users CRUD Design
+    [] -> Announcements CRUD Design
+    [] -> ContactMesssages CRUD Design
+    [] -> Settings CRUD Design
+
+
+######### COMPLETED ##############

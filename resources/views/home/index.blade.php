@@ -32,7 +32,7 @@
                             <div class="card card--big">
                                 <div class="card__cover">
                                     <img src="{{Storage::url($movie->image)}}" alt="">
-                                    <a href="#" class="card__play">
+                                    <a href="{{route('home.movie_show',['id' => $movie->id])}}" class="card__play">
                                         <i class="icon ion-ios-play"></i>
                                     </a>
                                 </div>
@@ -115,7 +115,7 @@
                                     <div class="col-12 col-sm-4">
                                         <div class="card__cover">
                                             <img src="{{Storage::url($movie->image)}}" alt="">
-                                            <a href="#" class="card__play">
+                                            <a href="{{route('home.movie_show',['id' => $movie->id])}}" class="card__play">
                                                 <i class="icon ion-ios-play"></i>
                                             </a>
                                         </div>

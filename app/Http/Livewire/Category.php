@@ -16,7 +16,10 @@ class Category extends Component
     public function render()
     {
 
-        $this->categories = CategoryModel::where('title','LIKE','%' . $this->search . '%')->paginate(5);
+        $this->categories = CategoryModel::where(function($q){
+            $q->where('title','LIKE','%'.$this->search.'%')
+            ->orWhere('description','LIKE','%'.$this->search.'%');
+        })->paginate(5);
         return view('livewire.category',[
             'categories' => $this->categories
         ]);

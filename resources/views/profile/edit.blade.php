@@ -1,5 +1,24 @@
 @extends('layouts.home')
 @section('content')
+<style>
+    .nav-tabs{
+        display:flex;
+        background: #fff;
+        height: 80px;
+        justify-content: center;
+        align-items: center;
+    }
+    .nav-tabs li a{
+        font-size:24px;
+        font-weight: 600;
+    }
+    input{
+        background: #2d3748;
+        height:36px;
+        color:white;
+        text-indent: 12px;
+    }
+</style>
     <div class="container my-5">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight my-3">
                 {{ __('Profile') }}
@@ -8,8 +27,12 @@
             <div class="panel with-nav-tabs panel-default">
                 <div class="panel-heading">
                     <ul class="nav nav-tabs">
-                        <li class="active"><a class="btn btn-warning px-3 py-2 m-2" href="#profile" data-toggle="tab">Profile</a></li>
-                        <li><a href="#order"  class="btn btn-warning px-3 py-2 m-2" data-toggle="tab">Order</a></li>
+                        <li class="active">
+                            <a class="btn btn-warning px-3 py-2 m-2" href="#profile" data-toggle="tab">Profile</a>
+                        </li>
+                        <li>
+                            <a href="#order"  class="btn btn-warning px-3 py-2 m-2" data-toggle="tab">Comments</a>
+                        </li>
                     </ul>
                 </div>
                 <div class="panel-body">
@@ -33,7 +56,7 @@
                             </div>
                         </div>
                         <div class="tab-pane fade" id="order">
-                            @include('profile.partials.order')
+                            ASDSADSA
                         </div>
 
                     </div>

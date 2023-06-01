@@ -20,8 +20,8 @@ class SettingSeeder extends Seeder
                 "description" => "Welcome to Film & Dizi İzle, your trusted partner in the world of real estate. We are a leading agency dedicated to helping individuals, families, and businesses find their perfect property solutions.",
                 "logo" => "no_image",
                 "address" => "California, SA 50030 Street",
-                "email" => "+90 549 693 67 53 ",
-                "phone" => "filmdiziizle@gmail.com"
+                "email" => "filmdiziizle@gmail.com",
+                "phone" => "+90 549 693 67 53"
             ]);
         }
     }

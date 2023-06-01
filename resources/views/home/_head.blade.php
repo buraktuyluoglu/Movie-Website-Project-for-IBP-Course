@@ -16,7 +16,9 @@
     <link rel="stylesheet" href="{{asset('home')}}/css/photoswipe.css">
     <link rel="stylesheet" href="{{asset('home')}}/css/default-skin.css">
     <link rel="stylesheet" href="{{asset('home')}}/css/main.css">
+    <script src="https://cdn.tailwindcss.com"></script>
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Favicons -->
     <link rel="icon" type="image/png" href="{{asset('home')}}/icon/favicon-32x32.png" sizes="32x32">
     <link rel="apple-touch-icon" href="{{asset('home')}}/icon/favicon-32x32.png">

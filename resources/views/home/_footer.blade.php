@@ -16,9 +16,9 @@
             <div class="col-6 col-sm-4 col-md-3">
                 <h6 class="footer__title">Resources</h6>
                 <ul class="footer__list">
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Pricing Plan</a></li>
-                    <li><a href="#">Help</a></li>
+                    <li><a href="{{route('home.about')}}">About Us</a></li>
+                    <li><a href="{{route('home.faq')}}">Faq</a></li>
+                    <li><a href="{{route('home.contact')}}">Contact</a></li>
                 </ul>
             </div>
             <!-- end footer list -->
@@ -38,8 +38,9 @@
             <div class="col-12 col-sm-4 col-md-3">
                 <h6 class="footer__title">Contact</h6>
                 <ul class="footer__list">
-                    <li><a href="tel:+18002345678">+1 (800) 234-5678</a></li>
-                    <li><a href="mailto:support@moviego.com">support@flixgo.com</a></li>
+                    <li><a href="tel:{{$settings->phone}}">{{$settings->phone}}</a></li>
+                    <li><a href="#">{{$settings->address}}</a></li>
+                    <li><a href="mailto:{{$settings->email}}">{{$settings->email}}</a></li>
                 </ul>
                 <ul class="footer__social">
                     <li class="facebook"><a href="#"><i class="icon ion-logo-facebook"></i></a></li>
@@ -53,7 +54,7 @@
             <!-- footer copyright -->
             <div class="col-12">
                 <div class="footer__copyright">
-                    <small><a target="_blank" href="https://www.templateshub.net">Templates Hub</a></small>
+                    <small><a target="_blank" href="/"> ® All Rights Reserved | 2023</a></small>
 
                     <ul>
                         <li><a href="#">Terms of Use</a></li>
