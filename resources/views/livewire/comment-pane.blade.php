@@ -20,9 +20,9 @@
                                                 <p class="comments__text">{{$comment->comment}}</p>
                                                 <div class="comments__actions">
                                                     <div class="comments__rate">
-                                                        <button type="button"><i class="icon ion-md-thumbs-up"></i>12</button>
+                                                        <button type="button"><i class="icon ion-md-thumbs-up"></i>{{count($comment->getLikes())}}</button>
 
-                                                        <button type="button">7<i class="icon ion-md-thumbs-down"></i></button>
+                                                        <button type="button">{{count($comment->getLikes())}}<i class="icon ion-md-thumbs-down"></i></button>
                                                     </div>
 
                                                     <button type="button" wire:click="renderForm({{$loop->index}},{{$comment->id}})"><i class="icon ion-ios-share-alt" ></i>Reply</button>
@@ -41,9 +41,9 @@
                                                     <p class="comments__text">{{$answer->comment}}</p>
                                                     <div class="comments__actions">
                                                         <div class="comments__rate">
-                                                            <button type="button"><i class="icon ion-md-thumbs-up"></i>8</button>
+                                                            <button type="button"><i class="icon ion-md-thumbs-up"></i>{{count($answer->getLikes())}}</button>
 
-                                                            <button type="button">3<i class="icon ion-md-thumbs-down"></i></button>
+                                                            <button type="button">{{count($answer->getDislikes())}}<i class="icon ion-md-thumbs-down"></i></button>
                                                         </div>
                                                         @if($answer->user_id===Auth::user()->id)
                                                             <button type="button" wire:click="deleteComment({{$answer->id}})"><i class="fas fa-trash" ></i>Delete</button>

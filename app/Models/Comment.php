@@ -21,4 +21,15 @@ class Comment extends Model
     public function movie(){
         return $this->belongsTo(Movie::class,"movie_id","id");
     }
+    public function likes(){
+        return $this->hasMany(CommentLike::class,"comment_id","id");
+    }
+
+    public function scopeGetLikes(){
+        return $this->likes()->where("type","LIKE")->get();
+    }
+
+    public function getDislikes(){
+        return $this->likes()->where("type","DISLIKE")->get();
+    }
 }
