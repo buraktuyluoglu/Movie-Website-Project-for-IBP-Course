@@ -22,7 +22,7 @@ Route::middleware(["announcements"])->name("home.")->group(function (){
         Route::get("/about",[HomeController::class,"about"])->name("about");
         Route::get("/faq",[HomeController::class,"faq"])->name("faq");
         Route::get("/announcements",[HomeController::class,"announcements"])->name("announcements");
-        Route::get("/c/{id}/{slug}",[HomeController::class,"category_property"])->name("category.property");
+        Route::get("/c/{id}/{slug}",[HomeController::class,"category_movie"])->name("category.movie");
 });
 
 # Admin Dashboard Routes

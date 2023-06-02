@@ -3,7 +3,7 @@
     <!-- Brand Logo -->
     <a href="/admin" class="brand-link  text-warning">
         <i class="fa fa-video text-white px-2 py-1"></i>
-        <span class="brand-text font-weight-bolder text-warning">Film & Dizi İzle</span>
+        <span class="brand-text font-weight-bolder text-warning">Film  İzle</span>
     </a>
 
     <!-- Sidebar -->
@@ -37,6 +37,7 @@
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                 <!-- Add icons to the links using the .nav-icon class
                      with font-awesome or any other icon font library -->
+
                 <li class="nav-item">
                     <a href="{{route("admin.dashboard")}}" class="nav-link">
                         <i class="nav-icon fas fa-th"></i>
@@ -46,30 +47,52 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{ route('admin.movie.index') }}" class="nav-link text-warning">
+                    <a href="#" class="nav-link">
                         <i class="nav-icon fas fa-film"></i>
                         <p>
                             Movies
+                            <i class="right fas fa-angle-left"></i>
                         </p>
                     </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="{{ route('admin.movie.index') }}" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>List</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ route('admin.movie.create') }}" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Create</p>
+                            </a>
+                        </li>
+                    </ul>
                 </li>
                 <li class="nav-item">
-                    <a href="{{ route('admin.category.index') }}" class="nav-link ">
+                    <a href="#" class="nav-link">
                         <i class="nav-icon fas fa-list-alt"></i>
                         <p>
                             Category
+                            <i class="right fas fa-angle-left"></i>
                         </p>
                     </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="{{ route('admin.category.index') }}" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>List</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ route('admin.category.create') }}" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Create</p>
+                            </a>
+                        </li>
+                    </ul>
                 </li>
 
-                <li class="nav-item ">
-                    <a href="{{ route('admin.series.index') }}" class="nav-link text-warning">
-                        <i class="nav-icon fas fa-video"></i>
-                        <p>
-                            Series
-                        </p>
-                    </a>
-                </li>
                 <li class="nav-item">
                     <a href="{{ route('admin.user.index') }}" class="nav-link">
                         <i class="nav-icon fas fa-users"></i>

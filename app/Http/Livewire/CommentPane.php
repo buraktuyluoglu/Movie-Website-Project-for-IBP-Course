@@ -82,8 +82,11 @@ class CommentPane extends Component
         if(count($movie->comments)<1){
             $this->showForm = -1;
         }
+
+        $movieList = \App\Models\Movie::where('category_id',$movie->category_id)->where('id','!=',$this->movieId)->get();
         return view('livewire.comment-pane',[
-            'movie' => $movie
+            'movie' => $movie,
+            'movieList' => $movieList
         ]);
     }
 }

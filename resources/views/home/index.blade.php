@@ -39,9 +39,9 @@
                                 <div class="card__content">
                                     <h3 class="card__title"><a href="#">{{$movie->name}}</a></h3>
                                     <span class="card__category">
-										<a href="#">{{$movie->category->title}}</a>
+										  <span class="card__rate"><i class="icon ion-ios-star"></i></span><a href="#">{{$movie->category->title}}</a>
 									</span>
-                                    <span class="card__rate"><i class="icon ion-ios-star"></i>8.4</span>
+
                                 </div>
                             </div>
                             <!-- end card -->

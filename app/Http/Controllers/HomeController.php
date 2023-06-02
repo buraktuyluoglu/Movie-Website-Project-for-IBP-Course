@@ -53,7 +53,13 @@ class HomeController extends Controller
         return view("home.category.index");
     }
 
+    public function category_movie($id){
 
+        $movieList = Movie::where('category_id',$id)->paginate(1);
+        return view('home.movie.index',[
+            'movieList' => $movieList
+        ]);
+    }
 
 
     public function contact_message(Request $req){

@@ -3,6 +3,9 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Comment;
+use App\Models\CommentLike;
+use App\Models\Movie;
 use App\Models\Category;
 use App\Models\ContactMessage;
 
@@ -22,11 +25,15 @@ class AdminController extends Controller
     {
         $users = User::count();
         $messages = ContactMessage::count();
-
-
+        $movies = Movie::count();
+        $comments = Comment::count();
+        $categories = Category::all();
         return view("admin.dashboard",[
             'users' => $users,
-            'messages' => $messages
+            'messages' => $messages,
+            'movies' => $movies,
+            'comments' => $comments,
+            'categories' => $categories
         ]);
     }
 

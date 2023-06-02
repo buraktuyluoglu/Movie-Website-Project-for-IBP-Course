@@ -1,3 +1,6 @@
+
+
+
 <!-- jQuery -->
 <script src="{{asset("assets_admin")}}/plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap 4 -->
@@ -25,3 +28,5 @@
 <script src="{{asset("assets_admin")}}/dist/js/adminlte.min.js"></script>
 
 <script src="{{asset("assets_admin")}}/dist/js/demo.js"></script>
+<!-- ChartJS -->
+<script src="{{asset('assets_admin')}}/plugins/chart.js/Chart.min.js"></script>

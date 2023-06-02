@@ -1,6 +1,6 @@
 <div>
     <div class="row">
-        <input class="form-control my-3" placeholder="Search by subject, content and email" wire:model="search" />
+        <input class="form-control my-3 w-50" placeholder="Search by subject, content and email" wire:model="search" />
     </div>
     <div class="row">
         <table class="table table-bordered table-dark text-white table-hover">

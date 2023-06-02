@@ -29,7 +29,7 @@
     <meta name="description" content="">
     <meta name="keywords" content="">
     <meta name="author" content="Dmitry Volkov">
-    <title>Film & Dizi İzle</title>
+    <title>Film İzle</title>
 
     @livewireStyles
 </head>

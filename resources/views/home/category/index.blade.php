@@ -25,7 +25,7 @@
                         <div class="card__cover" style="background:black;">
                             <img src="{{Storage::url($category->image)}}" alt="">
 
-                            <a href="#" class="card__play" style="border:none;text-align: center">
+                            <a href="{{route('home.category.movie',['id' => $category->id,'slug' => $category->slug])}}" class="card__play" style="border:none;text-align: center">
                                 {{$category->title}} <br/>
                             </a>
                         </div>

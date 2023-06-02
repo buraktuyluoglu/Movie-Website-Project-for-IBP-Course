@@ -9,7 +9,7 @@
     @include('home._header')
 @show
 <!--Content-->
-
+<div style="height:50px;"></div>
 @section("content")
 @show
 

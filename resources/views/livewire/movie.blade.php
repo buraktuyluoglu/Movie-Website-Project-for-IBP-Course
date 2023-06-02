@@ -1,7 +1,7 @@
 <div>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <div class="row">
-        <input class="form-control my-3" placeholder="Search title-description" wire:model="search" />
+        <input class="form-control my-3 w-50" placeholder="Search title-description" wire:model="search" />
     </div>
     <div class="row">
         <table class="table table-bordered table-danger ">

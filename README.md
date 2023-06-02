@@ -1,13 +1,3 @@
-# ADMIN
-
-[] -> ** Like Management ** livewire ile post işlemiyle like işlemi yapılacak
-[] -> You may also like kısmı aktif hale getirilecek
-[] -> Series CRUD
-    [] -> Single Episode CRUD
-
-
-
-
 
 # ADMIN DESIGN UPDATE
     [] -> Dashboard 
