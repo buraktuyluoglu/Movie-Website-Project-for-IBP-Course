@@ -3,6 +3,7 @@
 namespace App\Http\Livewire;
 
 use App\Models\Comment;
+use App\Models\CommentLike;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Livewire\Component;
@@ -28,6 +29,27 @@ class CommentPane extends Component
             $this->showForm = $id;
             $this->parent_id = $pId;
         }
+
+    }
+    public function likeComment($id,$type){
+
+        $comment = CommentLike::where('liked_by',Auth::user()->id)->where('comment_id',$id)->first();
+        #is new?
+
+        if($comment===null){
+            $newLike = new CommentLike();
+            $newLike->liked_by =  Auth::user()->id;
+            $newLike->type = "LIKE";
+            $newLike->comment_id = $id;
+            $newLike->save();
+        }
+        #update like2dislike, dislike2like
+        else {
+            $comment->type = $type;
+            $comment->save();
+        }
+
+
 
     }
     public function deleteComment($id){

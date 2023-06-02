@@ -17,4 +17,11 @@ class Movie extends Model
     public function comments(){
         return $this->hasMany(Comment::class,"movie_id","id");
     }
+
+    public function scopeSortedComments($query)
+    {
+        return $query->with(['comments' => function ($query) {
+            $query->orderBy('created_at', 'desc');
+        }]);
+    }
 }

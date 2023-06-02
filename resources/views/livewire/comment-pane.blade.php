@@ -20,15 +20,16 @@
                                                 <p class="comments__text">{{$comment->comment}}</p>
                                                 <div class="comments__actions">
                                                     <div class="comments__rate">
-                                                        <button type="button"><i class="icon ion-md-thumbs-up"></i>{{count($comment->getLikes())}}</button>
+                                                        <button type="button" wire:click="likeComment({{$comment->id}},'LIKE')"><i class="icon ion-md-thumbs-up"></i>{{count($comment->getLikes())}}</button>
 
-                                                        <button type="button">{{count($comment->getLikes())}}<i class="icon ion-md-thumbs-down"></i></button>
+                                                        <button type="button" wire:click="likeComment({{$comment->id}},'DISLIKE')">{{count($comment->getDislikes())}}<i class="icon ion-md-thumbs-down"></i></button>
                                                     </div>
-
-                                                    <button type="button" wire:click="renderForm({{$loop->index}},{{$comment->id}})"><i class="icon ion-ios-share-alt" ></i>Reply</button>
-                                                    @if($comment->user_id===Auth::user()->id)
-                                                        <button type="button" wire:click="deleteComment({{$comment->id}})"><i class="fas fa-trash" ></i>Delete</button>
-                                                    @endif
+                                                    @auth
+                                                        <button type="button" wire:click="renderForm({{$loop->index}},{{$comment->id}})"><i class="icon ion-ios-share-alt" ></i>Reply</button>
+                                                        @if($comment->user_id===Auth::user()->id)
+                                                            <button type="button" wire:click="deleteComment({{$comment->id}})"><i class="fas fa-trash" ></i>Delete</button>
+                                                        @endif
+                                                    @endauth
                                                 </div>
                                             </li>
                                             @foreach($comment->answers as $answer)
@@ -41,37 +42,45 @@
                                                     <p class="comments__text">{{$answer->comment}}</p>
                                                     <div class="comments__actions">
                                                         <div class="comments__rate">
-                                                            <button type="button"><i class="icon ion-md-thumbs-up"></i>{{count($answer->getLikes())}}</button>
+                                                            <button type="button"  wire:click="likeComment({{$answer->id}},'LIKE')"><i class="icon ion-md-thumbs-up"></i>{{count($answer->getLikes())}}</button>
 
-                                                            <button type="button">{{count($answer->getDislikes())}}<i class="icon ion-md-thumbs-down"></i></button>
+                                                            <button type="button"  wire:click="likeComment({{$answer->id}},'DISLIKE')">{{count($answer->getDislikes())}}<i class="icon ion-md-thumbs-down"></i></button>
                                                         </div>
-                                                        @if($answer->user_id===Auth::user()->id)
-                                                            <button type="button" wire:click="deleteComment({{$answer->id}})"><i class="fas fa-trash" ></i>Delete</button>
-                                                        @endif
+                                                        @auth
+                                                            @if($answer->user_id===Auth::user()->id)
+                                                                <button type="button" wire:click="deleteComment({{$answer->id}})"><i class="fas fa-trash" ></i>Delete</button>
+                                                            @endif
+                                                        @endauth
                                                     </div>
-                                                    @if($showForm === $loop->parent->index && $loop->count-1===$loop->index)
-                                                        <div class="form mt-5" >
-                                                            <input type="hidden" wire:model="parent_id"/>
-                                                            <input type="hidden" wire:model="movie_id" value="{{$movie->id}}"/>
-                                                            <textarea id="text" wire:model="comment" class="form__textarea" placeholder="Add comment"></textarea>
-                                                            <button type="submit" class="form__btn" wire:click="submitComment()">Send</button>
-                                                        </div>
-                                                    @endif
+                                                    @auth
+                                                        @if($showForm === $loop->parent->index && $loop->count-1===$loop->index)
+                                                            <div class="form mt-5" >
+                                                                <input type="hidden" wire:model="parent_id"/>
+                                                                <input type="hidden" wire:model="movie_id" value="{{$movie->id}}"/>
+                                                                <textarea id="text" wire:model="comment" class="form__textarea" placeholder="Add comment"></textarea>
+                                                                <button type="submit" class="form__btn" wire:click="submitComment()">Send</button>
+                                                            </div>
+                                                        @endif
+                                                    @endauth
+
                                                 </li>
                                             @endforeach
                                             <!--Parentsa ve yanıtı yoksa -->
-                                            @if($showForm === $loop->index && count($comment->answers)<=0)
-                                                <div class="form mt-2 mb-5" >
-                                                    <input type="hidden" wire:model="parent_id"/>
-                                                    <input type="hidden" wire:model="movie_id" value="{{$movie->id}}"/>
-                                                    <textarea id="text" wire:model="comment" class="form__textarea" placeholder="Add comment"></textarea>
-                                                    <button type="submit" class="form__btn" wire:click="submitComment()">Send</button>
-                                                </div>
-                                            @endif
+                                            @auth
+                                                @if($showForm === $loop->index && count($comment->answers)<=0)
+                                                    <div class="form mt-2 mb-5" >
+                                                        <input type="hidden" wire:model="parent_id"/>
+                                                        <input type="hidden" wire:model="movie_id" value="{{$movie->id}}"/>
+                                                        <textarea id="text" wire:model="comment" class="form__textarea" placeholder="Add comment"></textarea>
+                                                        <button type="submit" class="form__btn" wire:click="submitComment()">Send</button>
+                                                    </div>
+                                                @endif
+                                           @endauth
                                         @endif
                                     @endforeach
 
                                 </ul>
+                                @auth
                                 @if($showForm === -1)
                                     <div class="form mt-5" >
                                         <input type="hidden" wire:model="parent_id" value="0"/>
@@ -80,6 +89,9 @@
                                         <button type="submit" class="form__btn" wire:click="submitComment()">Send</button>
                                     </div>
                                 @endif
+                                @else
+                                     <a href="{{route('login')}}" style="color:#fff;text-indent: 5px;font-weight: 400;font-size:18px;border-bottom:1px solid #fff;">Please Login to Make Comment</a>
+                                @endauth
 
                             </div>
                         </div>
