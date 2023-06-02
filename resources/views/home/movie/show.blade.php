@@ -41,7 +41,7 @@
                                     </div>
 
                                     <ul class="card__meta">
-                                        <li><span>Genre:</span><a href="#"> {{$movie->category->title}}</a></li>
+                                        <li><span>Genre:</span><a href="{{route('home.category.movie',['id' => $movie->category->id,'slug' => $movie->category->slug])}}"> {{$movie->category->title}}</a></li>
                                         <li><span>Release year:</span> {{$movie->release_year}}</li>
                                         <li><span>Running time:</span> {{$movie->running_time}}</li>
                                     </ul>

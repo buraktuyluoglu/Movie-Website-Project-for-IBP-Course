@@ -39,7 +39,7 @@
                                 <div class="card__content">
                                     <h3 class="card__title"><a href="#">{{$movie->name}}</a></h3>
                                     <span class="card__category">
-										  <span class="card__rate"><i class="icon ion-ios-star"></i></span><a href="#">{{$movie->category->title}}</a>
+										  <span class="card__rate"><i class="icon ion-ios-star"></i></span><a href="{{route('home.category.movie',['id' => $movie->category->id,'slug' => $movie->category->slug])}}">{{$movie->category->title}}</a>
 									</span>
 
                                 </div>
@@ -61,7 +61,7 @@
                 <div class="row">
                     <div class="col-12">
                         <!-- content title -->
-                        <h2 class="content__title">New items</h2>
+                        <h2 class="content__title">New Movies</h2>
                         <!-- end content title -->
 
                         <!-- content tabs nav -->
@@ -125,7 +125,7 @@
                                         <div class="card__content">
                                             <h3 class="card__title"><a href="#">{{$movie->name}}</a></h3>
                                             <span class="card__category">
-												<a href="#">{{$movie->category->title}}</a>
+												<a href="{{route('home.category.movie',['id' => $movie->category->id,'slug' => $movie->category->slug])}}">{{$movie->category->title}}</a>
 											</span>
 
                                             <div class="card__wrap">

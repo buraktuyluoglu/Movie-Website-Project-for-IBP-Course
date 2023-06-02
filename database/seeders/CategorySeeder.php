@@ -45,5 +45,12 @@ class CategorySeeder extends Seeder
             "status" => "ACTIVE"
         ]);
 
+        Category::create([
+            'title' => "Kült Filmler",
+            'description' => "Kült Filmler ile heyecanı doruğa çıkartabilirsiniz.",
+            'image' => "public/covers/category.jpg",
+            "slug" => "kült-filmler",
+            "status" => "ACTIVE"
+        ]);
     }
 }

@@ -55,7 +55,7 @@ class HomeController extends Controller
 
     public function category_movie($id){
 
-        $movieList = Movie::where('category_id',$id)->paginate(1);
+        $movieList = Movie::where('category_id',$id)->paginate(8);
         return view('home.movie.index',[
             'movieList' => $movieList
         ]);
