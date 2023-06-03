@@ -17,7 +17,7 @@
             </thead>
             <tbody>
             @foreach($contactMessages as $contact)
-                <tr @if($contact->status==="CHECKED") class="text-green" @endif>
+                <tr @if($contact->status==="CHECKED") class="text-warning " style="text-decoration: line-through !important;"  @endif>
                     <td>{{ $contact->id }}</td>
                     <td>{{ $contact->subject }}</td>
                     <td>{{ $contact->email }}</td>

@@ -40,7 +40,7 @@ class ContactMessageController extends Controller
         $message = ContactMessage::find($id);
         $message->status = $request->status;
         $message->save();
-        return redirect()->back()->with("success","Updated successfully!");
+        return redirect()->route('admin.contact.index')->with("success","Updated");
     }
 
     /**

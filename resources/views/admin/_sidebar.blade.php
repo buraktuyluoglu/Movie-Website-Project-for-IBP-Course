@@ -114,7 +114,7 @@
                     <a href="{{ route('admin.contact.index') }}" class="nav-link">
                         <i class="nav-icon fas fa-envelope"></i>
                         <p>
-                            Contact Messages
+                            Contact Messages   <span class="badge badge-danger right">{{$notifications}}</span>
                         </p>
                     </a>
                 </li>

@@ -21,7 +21,7 @@ class Contact extends Component
             $q->where('subject','LIKE','%'. $this->search . '%')
                 ->orWhere('text','LIKE','%'.$this->search.'%')
                 ->orWhere('email','LIKE','%'.$this->search.'%');
-        })->paginate(5);
+        })->orderBy('status')->paginate(6);
 
         return view('livewire.contact',[
             'contactMessages' => $this->contactMessages
