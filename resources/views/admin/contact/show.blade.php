@@ -55,9 +55,11 @@
                         <i class="nav-icon fas fa-trash"></i>
                     </button>
                 </form>
+                <a class="btn btn-primary" href="mailto:{{$message->email}}"><i class="fa fa-paper-plane"></i><span class="mx-2">Reply</span> </a>
 
             </td>
         </tr>
+
         </tbody>
     </table>
 
