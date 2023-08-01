@@ -1,3 +1,6 @@
+# Contributors:
+   -> Büşra Tüter
+   -> Ahmet Enes Çil
 
 # ADMIN DESIGN UPDATE
     [] -> Dashboard 
@@ -13,3 +16,4 @@
 ######### COMPLETED ##############
 Project introduction ->
 https://drive.google.com/file/d/1vbmPLgbNyubsZfbLYkzJQXGbf3h2I9pD/view?usp=sharing
+
